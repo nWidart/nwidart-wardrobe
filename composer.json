@@ -16,7 +16,8 @@
 	"keywords": ["framework", "laravel"],
 	"require": {
 		"laravel/framework": "4.0.*",
-		"wardrobe/core": "dev-master"
+		"wardrobe/core": "dev-master",
+		"rtablada/wardrobe-disqus": "*"
 	},
 	"autoload": {
 		"classmap": [

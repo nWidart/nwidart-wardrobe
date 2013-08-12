@@ -115,6 +115,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
 		'Wardrobe\Core\WardrobeServiceProvider',
+		'Rtablada\WardrobeDisqus\WardrobeDisqusServiceProvider'
 
 	),
 
@@ -181,6 +182,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Wardrobe'        => 'Wardrobe\Core\Facades\WardrobeFacade',
+		'Disqus'          => 'Rtablada\WardrobeDisqus\Facades\Disqus'
 
 	),
 

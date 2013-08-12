@@ -16,6 +16,6 @@
 <hr />
 <div class="comments">
     <!-- <h2 class="title">Comments</h2> -->
-
+    {{ Disqus::comments() }}
 </div>
 @stop
