@@ -1,0 +1,541 @@
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+hr {
+  background: url('../img/separator.png') repeat-x;
+  height: 2px;
+  border: none;
+}
+/*  -------------------------------
+  Typography
+  -------------------------------
+*/
+@font-face {
+  font-family: 'ColaborateLightRegular';
+  src: url('../fonts/colablig-webfont.eot');
+  src: url('../fonts/colablig-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/colablig-webfont.woff') format('woff'), url('../fonts/colablig-webfont.ttf') format('truetype'), url('../fonts/colablig-webfont.svg#ColaborateLightRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ColaborateMediumRegular';
+  src: url('../fonts/colabmed-webfont.eot');
+  src: url('../fonts/colabmed-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/colabmed-webfont.woff') format('woff'), url('../fonts/colabmed-webfont.ttf') format('truetype'), url('../fonts/colabmed-webfont.svg#ColaborateMediumRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ColaborateRegular';
+  src: url('../fonts/colabreg-webfont.eot');
+  src: url('../fonts/colabreg-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/colabreg-webfont.woff') format('woff'), url('../fonts/colabreg-webfont.ttf') format('truetype'), url('../fonts/colabreg-webfont.svg#ColaborateRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ColaborateThinRegular';
+  src: url('../fonts/colabthi-webfont.eot');
+  src: url('../fonts/colabthi-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/colabthi-webfont.woff') format('woff'), url('../fonts/colabthi-webfont.ttf') format('truetype'), url('../fonts/colabthi-webfont.svg#ColaborateThinRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: url('../img/bg.jpg') repeat;
+  border-top: 4px solid #112025 ;
+  font-family: Geneva, Lucida Sans, Lucida Grande, Lucida Sans Unicode, Verdana, sans-serif;
+  font-size: 14px;
+  color: #222;
+  text-shadow: 1px 1px 1px rgba(17, 32, 37, 0.19999999999999996);
+}
+::selection {
+  background: rgba(17, 32, 37, 0.8);
+  /* Safari */
+  color: #fff;
+}
+::-moz-selection {
+  background: rgba(17, 32, 37, 0.8);
+  /* Firefox */
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "ColaborateLightRegular", "colaborate-2", sans-serif;
+  font-weight: 300;
+}
+h1 {
+  color: #112025;
+  font-size: 22px;
+  font-family: "ColaborateLightRegular", "colaborate-2", CaviarDreamsBold, sans-serif;
+  font-weight: 100;
+  padding: 5px 0 0 0;
+  margin-bottom: 15px;
+  text-shadow: none;
+  line-height: 25px;
+}
+a {
+  border-bottom: 1px dotted rgba(17, 32, 37, 0.5);
+  text-decoration: none;
+  color: #112025;
+}
+a:hover {
+  border-bottom: 1px solid #112025;
+  font-style: italic;
+}
+
+header {
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  z-index: 200;
+  position: relative;
+}
+header h1 {
+  text-indent: -9999px;
+  background: url(../img/nw-logo.png) no-repeat;
+  width: 187px;
+  height: 129px;
+  margin-left: -70px;
+}
+#logobg {
+  background: url(../img/bg-logo.png) repeat-x;
+  height: 91px;
+  width: 20.5%;
+  position: absolute;
+  top: 33px;
+  z-index: -10;
+}
+header .row .threecol {
+  width: 22.05%;
+  float: left;
+}
+
+
+/*  -------------------------------
+  menu navigation
+  -------------------------------
+*/
+nav.main {
+  float:right;
+}
+.main-nav-container {
+  float:right
+}
+#menu-main-navigation-menu {
+  list-style: none;
+  margin: 40px 0 0 0;
+  float: right;
+}
+
+#menu-main-navigation-menun li:last-child {
+  padding-right: 0;
+}
+
+#menu-main-navigation-menu li {
+  padding: 0 10px;
+  float: left;
+  list-style: none;
+}
+
+#menu-main-navigation-menu li a {
+  font-family: 'ColaborateThinRegular', sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: #1b323b;
+  display: block;
+  padding: 5px 15px;
+  border: none;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  -ms-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: .9s;
+  -moz-transition-duration: .9s;
+  -o-transition-duration: .9s;
+  -ms-transition-duration: .9s;
+  transition-duration: .9s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0);
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0);
+}
+
+#menu-main-navigation-menu-1 li a.active {
+
+}
+
+#menu-main-navigation-menu li a.active {
+  background: #112025;
+  color: #fff !important;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+#menu-main-navigation-menu-1 li a:hover {
+
+}
+#menu-main-navigation-menu li a:hover {
+  background: #112025;
+  color: #fff !important;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+/*  -------------------------------
+  breadcrump
+  -------------------------------
+*/
+.breadcrump {
+  background: #112025;
+  padding: 5px 0;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  -moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+}
+.breadcrump p {
+  color: #fff;
+  margin: 0;
+  font-size: .85em;
+}
+.breadcrump a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.post h2.title {
+  color: #112025;
+  font-size: 2.5em;
+  font-weight: 100;
+  font-style: normal;
+  line-height: 1.1em;
+  float:left;
+  margin: 0;
+}
+
+p {
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3em;
+  color: #222;
+}
+
+ul.archive {
+  margin: 0;
+  padding: 0;
+}
+ul.archive li {
+  list-style-type: none;
+  padding: 5px 0;
+  margin: 0;
+  text-align: left;
+  font-weight: 400;
+}
+ul.archive li span {
+  float: right;
+  font-size: .9em;
+  padding-left: 10px;
+}
+ul.archive li strong {
+  font-size: 16px;
+  padding-right: 10px;
+  font-weight: normal;
+}
+.post .meta {
+  float: right;
+  margin-bottom: 30px;
+  border-left: 1px solid #112025;
+  padding-left: 2.4%;
+  font-size: .8em;
+}
+.post {
+  /*margin-top: 40px;*/
+}
+.post p {
+  text-align: justify;
+  line-height: 1.5em;
+  margin-bottom: 15px;
+}
+.post blockquote {
+  font-style: italic;
+}
+.tags ul {
+  list-style: none;
+}
+.tags ul > li {
+  float: left;
+  margin-right: 5px;
+}
+.tags ul > li:first-child:after {
+  content: '';
+}
+.tags ul > li:after {
+  content: ',';
+}
+.tags ul > li:last-child:after {
+  content: '';
+}
+.tags ul > li:last-child {
+  margin: 0;
+}
+.post h1 {
+  margin-bottom: 0;
+  font-size: 1.8em;
+  margin: 5px 0 15px;
+  padding: 0;
+}
+.post h2 {
+  color: #112025;
+  font-size: 1.5em;
+  font-weight: 100;
+  line-height: 1.2em;
+  margin: 5px 0 15px;
+}
+.content {
+  margin-top: 15px;
+}
+/*  The checklists  */
+.content ul {
+  list-style: none;
+  margin: 8px 20px;
+}
+
+.content ul > li {
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5em;
+}
+.content ul li:after {
+  content: '';
+  background: url('../img/nwCleanSprite.png') no-repeat -288px -9px;
+  width: 7px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+.content ol {
+  margin: 8px 40px;
+}
+.content ol > li {
+
+}
+.post .date {
+  font-size: .9em;
+  margin-bottom: 5px;
+}
+.pagination {
+  text-align: center;
+}
+.pagination ul {
+  list-style-type: none;
+}
+.pagination li {
+  padding: 5px;
+  display: inline-block;
+}
+
+footer {
+  background: #112025;
+  height: 50px;
+  margin-top: 50px;
+  color: #2D4F5B;
+}
+footer p {
+  font-size: 12px;
+  line-height: 50px;
+  text-decoration: none;
+  color: #2D4F5B;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/*
+CODE STYLES
+*/
+
+/*pre code {
+  display: block;
+  padding: .5em;
+  color: #000;
+  background: #f8f8ff;
+  font-family: Inconsolata,Monaco,"Lucida Console",monospace;
+  font-size: 13px;
+  line-height: 23px;
+  margin: 0;
+  white-space: pre;
+}
+pre {
+  border: 1px solid #d0d0d0;
+  color: #002166;
+  display: block;
+  margin: 14px 0 14px 0;
+  padding: 0;
+  background: none repeat scroll 0 0 #EEE;
+  border: 1px solid #DDD;
+  clear: both;
+  overflow: auto;
+}
+
+pre code {
+  display: block; padding: 0.5em;
+  color: #000;
+  background: #f8f8ff
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .javadoc {
+  color: #998;
+  font-style: italic
+}
+
+pre .keyword,
+pre .css .rule .keyword,
+pre .winutils,
+pre .javascript .title,
+pre .lisp .title,
+pre .subst,
+pre .request,
+pre .status {
+  color: #000;
+  font-weight: bold
+}
+
+pre .number,
+pre .hexcolor {
+  color: #40a070
+}
+
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula {
+  color: #d14
+}
+
+pre .title,
+pre .id {
+  color: #900;
+  font-weight: bold
+}
+
+pre .javascript .title,
+pre .lisp .title,
+pre .subst {
+  font-weight: normal
+}
+
+pre .class .title,
+pre .haskell .type,
+pre .vhdl .literal,
+pre .tex .command {
+  color: #458;
+  font-weight: bold
+}
+
+pre .tag,
+pre .tag .title,
+pre .rules .property,
+pre .django .tag .keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+pre .attribute,
+pre .variable,
+pre .instancevar,
+pre .lisp .body {
+  color: #008080
+}
+
+pre .regexp {
+  color: #009926
+}
+
+pre .class {
+  color: #458;
+  font-weight: bold
+}
+
+pre .symbol,
+pre .ruby .symbol .string,
+pre .ruby .symbol .keyword,
+pre .ruby .symbol .keymethods,
+pre .lisp .keyword,
+pre .tex .special,
+pre .input_number {
+  color: #990073
+}
+
+pre .builtin,
+pre .built_in,
+pre .lisp .title {
+  color: #0086b3
+}
+
+pre .preprocessor,
+pre .pi,
+pre .doctype,
+pre .shebang,
+pre .cdata {
+  color: #999;
+  font-weight: bold
+}
+
+pre .deletion {
+  background: #fdd
+}
+
+pre .addition {
+  background: #dfd
+}
+
+pre .diff .change {
+  background: #0086b3
+}
+
+pre .chunk {
+  color: #aaa
+}
+
+pre .tex .formula {
+  opacity: 0.5;
+}*/
+/* ============================= */
+/* ! Layout for  screen version   */
+/* ============================= */
+@media screen and (max-width: 1440px) {
+  #logobg {
+    width: 10%;
+  }
+}
